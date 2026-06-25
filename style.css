@@ -1,0 +1,16 @@
+div {
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 25px auto auto auto;
+    display: flex;
+    max-width: 320px;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
