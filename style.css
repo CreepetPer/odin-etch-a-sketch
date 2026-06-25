@@ -14,3 +14,7 @@ div {
     height: 20px;
     border: 1px solid black;
 }
+
+.hovered-square {
+    background-color: red;
+}
