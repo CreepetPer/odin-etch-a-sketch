@@ -6,11 +6,12 @@ div {
 .container {
     margin: 25px auto auto auto;
     display: flex;
-    max-width: 320px;
+    max-width: 500px;
+    outline: 5px solid black;
 }
 
 .square {
-    border: 1px solid black;
+    border: 0px solid black;
 }
 
 .hovered-square {

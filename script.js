@@ -5,7 +5,7 @@ function createGrid(size) {
     const square = document.createElement("div");
     square.classList.add("square")
     let sizePerRow = size ** 0.5;
-    let squareSize = 320 / sizePerRow;
+    let squareSize = 500 / sizePerRow;
     square.style.width = `${squareSize}px`;
     square.style.height = `${squareSize}px`;
     container.appendChild(square);
