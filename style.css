@@ -77,6 +77,8 @@ button {
   -webkit-user-select: none;
   touch-action: manipulation;
   width: fit-content;
+  display: block;
+  margin: 0 auto;
 }
 
 button:disabled {
