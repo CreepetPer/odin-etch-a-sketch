@@ -14,16 +14,29 @@ function createGrid(size) {
     square.style.height = `${squareSize}px`;
     container.appendChild(square);
     square.onmouseenter = (e) => {
-        if (rainbowMode === true) {
-            square.style.backgroundColor = `rgb(${getRandomInt(255)} ${getRandomInt(255)} ${getRandomInt(255)})`;
-        } else {
-                square.style.backgroundColor = "red";
-            }
+    if (rainbowMode === true) {
+        square.style.backgroundColor = `rgb(${getRandomInt(255)} ${getRandomInt(255)} ${getRandomInt(255)})`;
+        square.style.opacity = 1;
+    } else if (shadeMode === true) {
+        let currentOpacity = parseFloat(square.style.opacity);
+        
+        if (isNaN(currentOpacity)) {
+            currentOpacity = 1;
         }
+        
+        if (currentOpacity > 0) {
+            square.style.opacity = (currentOpacity - 0.1).toFixed(1);
+        }
+    } else {
+        square.style.backgroundColor = "red";
+        square.style.opacity = 1;
+    }
+}
     }
 }
 
 let rainbowMode = false;
+let shadeMode = false;
 
 let btn1 = document.querySelector(".new-btn");
 btn1.onclick = (e) => {
@@ -44,7 +57,7 @@ btn2.onclick = (e) => {
 
 let btn3 = document.querySelector(".shade-btn")
 btn3.onclick = (e) => {
-    
+    shadeMode = !shadeMode;
 }
 
 createGrid(256);

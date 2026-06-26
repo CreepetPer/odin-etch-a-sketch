@@ -54,6 +54,7 @@ div {
     margin-top: 20px;
     max-width: 500px;
     outline: 5px solid black;
+    background-color: black;
 }
 
 .toggle-buttons-container {
@@ -71,6 +72,8 @@ div {
 
 .square {
     border: 0px solid black;
+    background-color: white;
+    opacity: 1;
 }
 
 /* .hovered-square {
