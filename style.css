@@ -41,11 +41,32 @@ div {
     box-sizing: border-box;
 }
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+
 .container {
-    margin: 25px auto auto auto;
     display: flex;
+    margin-top: 20px;
     max-width: 500px;
     outline: 5px solid black;
+}
+
+.toggle-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+  position: absolute;
+  left: 22%;
+}
+
+.toggle-buttons-container button {
+  width: 100%;
 }
 
 .square {
