@@ -1,3 +1,7 @@
+function getRandomInt(max) { // random integer generator
+    return Math.floor(Math.random() * max)
+}
+
 const container = document.querySelector(".container")
 
 function createGrid(size) {
@@ -10,13 +14,19 @@ function createGrid(size) {
     square.style.height = `${squareSize}px`;
     container.appendChild(square);
     square.onmouseenter = (e) => {
-        square.classList.add("hovered-square");
+        if (rainbowMode === true) {
+            square.style.backgroundColor = `rgb(${getRandomInt(255)} ${getRandomInt(255)} ${getRandomInt(255)})`;
+        } else {
+                square.classList.add("hovered-square");
+            }
         }
     }
 }
 
-const btn = document.querySelector("button");
-btn.onclick = (e) => {
+let rainbowMode = false;
+
+let btn1 = document.querySelector(".new-btn");
+btn1.onclick = (e) => {
     let promptSize = prompt("Grid size? (eg. 16 for 16x16)", "16");
     if (promptSize > 100) {
         alert("That's too large... (limit = 100)");
@@ -25,6 +35,16 @@ btn.onclick = (e) => {
         container.innerHTML = ""
         createGrid(promptArea);
     }
+}
+
+let btn2 = document.querySelector(".rgb-btn")
+btn2.onclick = (e) => {
+    rainbowMode = !rainbowMode;
+}
+
+let btn3 = document.querySelector(".shade-btn")
+btn3.onclick = (e) => {
+    
 }
 
 createGrid(256);
