@@ -53,11 +53,13 @@ btn1.onclick = (e) => {
 let btn2 = document.querySelector(".rgb-btn")
 btn2.onclick = (e) => {
     rainbowMode = !rainbowMode;
+    if (rainbowMode) shadeMode = false;
 }
 
 let btn3 = document.querySelector(".shade-btn")
 btn3.onclick = (e) => {
     shadeMode = !shadeMode;
+    if (shadeMode) rainbowMode = false;
 }
 
 createGrid(256);
