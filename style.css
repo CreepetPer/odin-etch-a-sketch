@@ -73,9 +73,9 @@ div {
     border: 0px solid black;
 }
 
-.hovered-square {
+/* .hovered-square {
     background-color: red;
-}
+} */
 
 button {
   appearance: button;

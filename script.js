@@ -17,7 +17,7 @@ function createGrid(size) {
         if (rainbowMode === true) {
             square.style.backgroundColor = `rgb(${getRandomInt(255)} ${getRandomInt(255)} ${getRandomInt(255)})`;
         } else {
-                square.classList.add("hovered-square");
+                square.style.backgroundColor = "red";
             }
         }
     }
